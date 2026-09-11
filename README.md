@@ -57,3 +57,9 @@ Outputs are written automatically to `model/` and `results/`.
 ## Results
 See `results/metrics.txt` for the numeric scores and `results/*.png` for the
 training curves, confusion matrix, and misclassified examples.
+
+## Preference
+Why PyTorch/torchvision instead of OpenCV: OpenCV is a classical computer vision library built for image processing operations such as edge detection, thresholding, contour analysis, and morphological transformations — it does not provide built-in support for defining, training, or fine-tuning deep neural networks. This project's requirement is a binary classifier built via transfer learning on a pre-trained CNN (Task 2), which requires a deep learning framework capable of loading pretrained weights and updating them through backpropagation. PyTorch, together with torchvision.models, was used because it directly provides ImageNet-pretrained CNN architectures such as ResNet18 that can be loaded, frozen, and fine-tuned in just a few lines of code, making it well suited to the training-time constraints of this task. OpenCV was therefore not used as the classification engine, though it remains a suitable tool for classical, non-learning-based image processing tasks outside this project's scope.
+
+## ResNet18
+ResNet18 is an 18-layer Convolutional Neural Network from the ResNet ("Residual Network") family, introduced by Microsoft Research in 2015. It was trained on ImageNet — a dataset of 1.2 million images across 1,000 object categories — and became a widely used backbone for transfer learning because of both its accuracy and its relatively small size.
