@@ -1,0 +1,9 @@
+--- Validation Metrics ---
+Accuracy : 0.8962
+Precision: 0.8182
+Recall   : 0.9519
+F1-Score : 0.8800
+Confusion Matrix (rows=actual, cols=predicted):
+Classes: ['Defective', 'Normal']
+[[134  22]
+ [  5  99]]
